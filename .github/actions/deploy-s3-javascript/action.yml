@@ -8,6 +8,9 @@ inputs:
     description: 'Age of the Girl'
     required: false
     default: '21'
+outputs:
+   candate:
+      description: "Can I date this broad?"
 runs:
   using: 'node16'
   main: 'main.js'

@@ -70,7 +70,10 @@ jobs:
       - name: Get Code
         uses: actions/checkout@v3
       - name: Run Custom Action
+        id: js-action
         uses: ./.github/actions/deploy-s3-javascript
         with:
           name: Rachael Fami
           age: '28'
+      - name: Output Information
+        run: echo "Can I date her? ${{ steps.js-action.outputs.candate }}"
