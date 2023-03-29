@@ -1,5 +1,13 @@
 name: "Deploy to AWS S3"
 description: "Deploy static website to AWS S3"
+inputs:
+  name:
+    description: 'Name of the lovely girl'
+    required: true
+  age:
+    description: 'Age of the Girl'
+    required: false
+    default: '21'
 runs:
   using: 'node16'
   main: 'main.js'

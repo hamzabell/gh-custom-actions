@@ -4,7 +4,9 @@ const exec = require('@actions/exec')
 
 
 function run() {
-    core.notice('Hello From my custom javascript action!');
+    const name = core.getInput('name', { required: true });
+    const age = core.getInput('age');  
+    core.notice(`Hello ${name}, I understand that you are ${age} years old!`);
 }
 
 run();
